@@ -1,0 +1,130 @@
+[
+  {
+    "Id": "Bookings",
+    "DisplayName": "Microsoft Bookings"
+  },
+  {
+    "Id": "DynamicsCRM",
+    "DisplayName": "Dynamics 365"
+  },
+  {
+    "Id": "DynamicsNAV",
+    "DisplayName": "Dynamics 365 Business Central"
+  },
+  {
+    "Id": "EduAnalytics",
+    "DisplayName": "Education Analytics"
+  },
+  {
+    "Id": "Exchange",
+    "DisplayName": "Exchange Online"
+  },
+  {
+    "Id": "Forms",
+    "DisplayName": "Microsoft Forms"
+  },
+  {
+    "Id": "Intune",
+    "DisplayName": "Microsoft Intune"
+  },
+  {
+    "Id": "kaizalamessagingservices",
+    "DisplayName": "Microsoft Kaizala"
+  },
+  {
+    "Id": "Lync",
+    "DisplayName": "Skype for Business"
+  },
+  {
+    "Id": "MDATP",
+    "DisplayName": "Microsoft Defender ATP"
+  },
+  {
+    "Id": "MicrosoftFlow",
+    "DisplayName": "Microsoft Power Automate"
+  },
+  {
+    "Id": "MicrosoftFlowM365",
+    "DisplayName": "Microsoft Power Automate in Microsoft 365"
+  },
+  {
+    "Id": "microsoftteams",
+    "DisplayName": "Microsoft Teams"
+  },
+  {
+    "Id": "MobileDeviceManagement",
+    "DisplayName": "Mobile Device Management for Office 365"
+  },
+  {
+    "Id": "O365Client",
+    "DisplayName": "Office Client Applications"
+  },
+  {
+    "Id": "officeonline",
+    "DisplayName": "Office for the web"
+  },
+  {
+    "Id": "OneDriveForBusiness",
+    "DisplayName": "OneDrive for Business"
+  },
+  {
+    "Id": "OneEdu",
+    "DisplayName": "School Data Sync"
+  },
+  {
+    "Id": "OrgLiveID",
+    "DisplayName": "Identity Service"
+  },
+  {
+    "Id": "OSDPPlatform",
+    "DisplayName": "Microsoft 365 suite"
+  },
+  {
+    "Id": "Planner",
+    "DisplayName": "Planner"
+  },
+  {
+    "Id": "PowerApps",
+    "DisplayName": "Power Apps"
+  },
+  {
+    "Id": "PowerAppsM365",
+    "DisplayName": "Power Apps in Microsoft 365"
+  },
+  {
+    "Id": "PowerBIcom",
+    "DisplayName": "Power BI"
+  },
+  {
+    "Id": "ProjectForTheWeb",
+    "DisplayName": "Project for the web"
+  },
+  {
+    "Id": "ProjectOnline",
+    "DisplayName": "Project Online"
+  },
+  {
+    "Id": "RMS",
+    "DisplayName": "Azure Information Protection"
+  },
+  {
+    "Id": "SharePoint",
+    "DisplayName": "SharePoint Online"
+  },
+  {
+    "Id": "StaffHub",
+    "DisplayName": "Microsoft StaffHub"
+  },
+  {
+    "Id": "Stream",
+    "DisplayName": "Microsoft Stream"
+  },
+  {
+    "Id": "SwayEnterprise",
+    "DisplayName": "Sway"
+  },
+  {
+    "Id": "yammer",
+    "DisplayName": "Yammer Enterprise"
+  }
+]

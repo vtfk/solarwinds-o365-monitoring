@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfApplicationTemplate xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.solarwinds.com/2007/08/APM">
+	<ApplicationTemplate>
+		<Settings xmlns:s="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+			<s:KeyValueOfstringSettingValueyR_SGpLPx>
+				<s:Key>__DebugLoggingEnabled</s:Key>
+				<s:Value>
+					<Required>true</Required>
+					<SettingLevel>Template</SettingLevel>
+					<Value>False</Value>
+					<ValueType>Boolean</ValueType>
+					<Key i:nil="true" />
+				</s:Value>
+			</s:KeyValueOfstringSettingValueyR_SGpLPx>
+			<s:KeyValueOfstringSettingValueyR_SGpLPx>
+				<s:Key>__NumberOfLogFilesToKeep</s:Key>
+				<s:Value>
+					<Required>true</Required>
+					<SettingLevel>Template</SettingLevel>
+					<Value>30</Value>
+					<ValueType>Integer</ValueType>
+					<Key i:nil="true" />
+				</s:Value>
+			</s:KeyValueOfstringSettingValueyR_SGpLPx>
+			<s:KeyValueOfstringSettingValueyR_SGpLPx>
+				<s:Key>__Timeout</s:Key>
+				<s:Value>
+					<Required>true</Required>
+					<SettingLevel>Template</SettingLevel>
+					<Value>300</Value>
+					<ValueType>Integer</ValueType>
+					<Key i:nil="true" />
+				</s:Value>
+			</s:KeyValueOfstringSettingValueyR_SGpLPx>
+			<s:KeyValueOfstringSettingValueyR_SGpLPx>
+				<s:Key>__Use64Bit</s:Key>
+				<s:Value>
+					<Required>true</Required>
+					<SettingLevel>Template</SettingLevel>
+					<Value>False</Value>
+					<ValueType>Boolean</ValueType>
+					<Key i:nil="true" />
+				</s:Value>
+			</s:KeyValueOfstringSettingValueyR_SGpLPx>
+		</Settings>
+		<ComponentTemplates>
+{{APP_COMPS}}
+		</ComponentTemplates>
+		<DeletedComponentTemplates />
+		<Id>{{APP_ID}}</Id>
+		<Name>Office 365 Service Health Status</Name>
+		<IsMockTemplate>false</IsMockTemplate>
+		<Description>Uses Office 365 Service Communications API to get status of Office 365 Services
+
+Add Service and Azure Application Tenant ID to Arguments.
+Optionally add true as a 3rd parameter to include advisory messages (Default "false")
+Service,TenantID,[IncludeAdvisory]
+EG
+Exchange,012345a0-abc1-12a3-a123-1a2345b6cd78,false</Description>
+		<Tags>
+			<TagInfo>
+				<Name>Office 365</Name>
+				<TemplateID>{{APP_ID}}</TemplateID>
+			</TagInfo>
+		</Tags>
+		<Created>{{DATE}}</Created>
+		<LastModified>{{DATE}}</LastModified>
+		<CustomApplicationType i:nil="true" />
+		<Version>1.0</Version>
+		<ViewID>23</ViewID>
+		<ViewXml>
+			<View Columns="2" ColumnWidth1="561" ColumnWidth2="600" ColumnWidth3="0" Customizable="true" Group="10000061" GroupName="Copy of Application Details (1)" GroupPosition="1" Icon="Overview.png" Key="Office 365 Service Health Application Details" System="false" Title="Summary" Type="APM Application Details" xmlns="http://solarwinds.com/orion/web/view/1">
+				<Resources xmlns="">
+					<Resource Column="1" File="~/Orion/APM/Resources/Application/ApplicationDetails.ascx" Name="APM Application Details" Position="1" SubTitle="" Title="Application Details"></Resource>
+					<Resource Column="1" File="~/Orion/APM/Resources/Application/ApplicationEvents.ascx" Name="Last XX Application Events" Position="2" SubTitle="" Title="Last XX Application Events"></Resource>
+					<Resource Column="1" File="~/Orion/APM/Resources/Application/ApplicationAlerts.ascx" Name="Active Application Alerts" Position="3" SubTitle="" Title="Active Application Alerts"></Resource>
+					<Resource Column="1" File="/Orion/NetPerfMon/Resources/NodeDetails/NodeDetails.ascx" Name="Node Details" Position="4" SubTitle="" Title="Node Details"></Resource>
+					<Resource Column="1" File="/Orion/NetPerfMon/Resources/NodeDetails/ManagementTasks.ascx" Name="Management" Position="5" SubTitle="" Title="Management"></Resource>
+					<Resource Column="1" File="/Orion/APM/Resources/Application/AvailabilityStatistics.ascx" Name="Availability Statistics" Position="6" SubTitle="" Title="Availability Statistics"></Resource>
+					<Resource Column="2" File="~/Orion/APM/Resources/Application/AllProcessAndServiceMonitors.ascx" Name="Processes and Services" Position="1" SubTitle="" Title="Processes and Services"></Resource>
+					<Resource Column="2" File="/Orion/NetPerfMon/Resources/Misc/XuiWrapper.ascx" Name="Application Connections" Position="2" SubTitle="Dependencies - Shows Connection Quality To/From Apps &amp; Nodes" Title="Application Connections">
+						<Properties>
+							<Property Name="selector" Value="samadm-connections-widget"></Property>
+							<Property Name="stylepaths" Value="/ui/modules/sam.adm.incoming.connections.resource/css/widgets/connectionsWidget.min.css"></Property>
+							<Property Name="scriptpaths" Value="/ui/modules/sam.adm.incoming.connections.resource/js/widgets/connectionsWidget.min.js"></Property>
+							<Property Name="helplinkfragment" Value="OrionSamAdmNodesResource"></Property>
+						</Properties>
+					</Resource>
+					<Resource Column="2" File="~/Orion/NetPerfMon/Resources/AppStack/AppStack.ascx" Name="Environment for ${Caption}" Position="3" SubTitle="" Title="AppStack Environment for ${Caption}"></Resource>
+					<Resource Column="2" File="~/Orion/APM/Resources/Application/AllPortMonitors.ascx" Name="Components" Position="4" SubTitle="" Title="Components"></Resource>
+					<Resource Column="2" File="~/Orion/APM/Resources/Charting/AvailabilityChart.ascx" Name="Application Availability" Position="5" SubTitle="" Title="Application Availability">
+						<Properties>
+							<Property Name="numberofseriestoshow" Value="0"></Property>
+							<Property Name="chartsubtitle" Value="${ZoomRange}"></Property>
+							<Property Name="calculatesum" Value="0"></Property>
+							<Property Name="showtitle" Value="1"></Property>
+							<Property Name="charttitle" Value=""></Property>
+							<Property Name="hidethreshold" Value="0"></Property>
+							<Property Name="chartinitialzoom" Value="24h"></Property>
+							<Property Name="chartname" Value="APMApplicationAvailability"></Property>
+							<Property Name="netobjectprefix" Value="AAAA"></Property>
+							<Property Name="chartdatespan" Value="1"></Property>
+							<Property Name="calculatetrendline" Value="0"></Property>
+							<Property Name="autohide" Value="0"></Property>
+							<Property Name="samplesize" Value="60"></Property>
+							<Property Name="period" Value="TODAY"></Property>
+							<Property Name="calculate95thpercentile" Value="0"></Property>
+						</Properties>
+					</Resource>
+					<Resource Column="2" File="/Orion/NetPerfMon/Resources/NodeDetails/CPUMemory.ascx" Name="CPU Load &amp; Memory Statistics" Position="6" SubTitle="" Title="CPU Load &amp; Memory Statistics"></Resource>
+					<Resource Column="2" File="/Orion/NetPerfMon/Resources/Reports/ReportChartWrapper.ascx" Name="Custom Chart" Position="7" SubTitle="" Title="Custom Chart"></Resource>
+					<Resource Column="2" File="/Orion/APM/Resources/Charting/BasicCustomChart.ascx" Name="Custom Bar Chart" Position="8" SubTitle="" Title="Age of the last Notification Indexed">
+						<Properties>
+							<Property Name="numberofseriestoshow" Value="0"></Property>
+							<Property Name="chartsubtitle" Value="${ZoomRange}"></Property>
+							<Property Name="calculatesum" Value="0"></Property>
+							<Property Name="showtitle" Value="1"></Property>
+							<Property Name="samplesize" Value="60"></Property>
+							<Property Name="charttitle" Value="${Caption}"></Property>
+							<Property Name="hidethreshold" Value="0"></Property>
+							<Property Name="chartinitialzoom" Value="today"></Property>
+							<Property Name="chartname" Value="APMCustomBarChartStatisticData"></Property>
+							<Property Name="netobjectprefix" Value="AACB"></Property>
+							<Property Name="assignedtoresourceinfo" Value="W3siTmV0T2JqZWN0IjoiQUE6NTI1MCIsIlByb3BlcnRpZXMiOnsiNiI6IkFQTUN1c3RvbUJhckNoYXJ0U3RhdGlzdGljRGF0YSIsIjEiOiIxOTk3MDcifX1d"></Property>
+							<Property Name="chartdatespan" Value="7"></Property>
+							<Property Name="calculatetrendline" Value="0"></Property>
+							<Property Name="autohide" Value="0"></Property>
+							<Property Name="componentname" Value="Age of the Last Notification Indexed"></Property>
+							<Property Name="calculate95thpercentile" Value="0"></Property>
+						</Properties>
+					</Resource>
+				</Resources>
+			</View>
+		</ViewXml>
+		<ModuleVersion xmlns:d="http://schemas.datacontract.org/2004/07/System">
+			<d:_Build>0</d:_Build>
+			<d:_Major>6</d:_Major>
+			<d:_Minor>8</d:_Minor>
+			<d:_Revision>9502</d:_Revision>
+		</ModuleVersion>
+		<UniqueId>{{APP_UNIQUE_ID}}</UniqueId>
+	</ApplicationTemplate>
+</ArrayOfApplicationTemplate>
