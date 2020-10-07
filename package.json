@@ -1,0 +1,17 @@
+{
+  "name": "office365-status-script",
+  "version": "0.1.0",
+  "private": "true",
+  "description": "Generates an APM template for monitoring Office 365 services in Solarwinds",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Ingar Helgesen (https://github.com/Sherex)",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "uuid": "^8.3.1"
+  }
+}
