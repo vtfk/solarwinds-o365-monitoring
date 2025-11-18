@@ -12,6 +12,6 @@
   "license": "MIT",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "uuid": "^8.3.1"
+    "uuid": "^9.0.0"
   }
 }
